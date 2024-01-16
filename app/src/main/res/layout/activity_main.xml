@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick2"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick1"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick0"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick6"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick7"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick8"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick5"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick4"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="79dp"
+        android:layout_height="82dp"
+        android:onClick="buttonClick3"
+        app:cornerRadius="0dp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
