@@ -1,5 +1,6 @@
 package com.example.tictactoe
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -82,8 +83,9 @@ class MainActivity : AppCompatActivity() {
                 checkRightDiagForWin()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun handleWin() {
-        winLoseText.text = currentMove + " Wins!"
+        winLoseText.text = "$currentMove Wins!"
     }
 
     private fun handleMove() {
@@ -100,63 +102,63 @@ class MainActivity : AppCompatActivity() {
     fun buttonClick0(view: View) {
         if (button0.text == "") {
             button0.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick1(view: View) {
         if (button1.text == "") {
             button1.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick2(view: View) {
         if (button2.text == "") {
             button2.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick3(view: View) {
         if (button3.text == "") {
             button3.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick4(view: View) {
         if (button4.text == "") {
             button4.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick5(view: View) {
         if (button5.text == "") {
             button5.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick6(view: View) {
         if (button6.text == "") {
             button6.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick7(view: View) {
         if (button7.text == "") {
             button7.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
     fun buttonClick8(view: View) {
         if (button8.text == "") {
             button8.text = currentMove
-            handleMove();
+            handleMove()
         }
     }
 
