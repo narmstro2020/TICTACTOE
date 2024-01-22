@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,49 +29,63 @@ class MainActivity : AppCompatActivity() {
 
 
 
-//    private fun checkRowForWin(): Boolean {
-//        for (row in 0..2) {
-//            if (buttonArray[3 * row] == buttonArray[3 * row + 1] && buttonArray[3 * row + 2] == buttonArray[2]) {
-//                return true
-//            }
-//        }
-//        return false
-//    }
-//
-//    private fun checkColForWin(): Boolean {
-//        for (col in 0..2) {
-//            if (buttonArray[col] == buttonArray[col + 3] && buttonArray[col + 6] == buttonArray[2]) {
-//                return true
-//            }
-//        }
-//        return false
-//    }
-//
-//    private fun checkLeftDiagForWin(): Boolean {
-//        return buttonArray[0] == buttonArray[4] && buttonArray[0] == buttonArray[8]
-//    }
-//
-//    private fun checkRightDiagForWin(): Boolean {
-//        return buttonArray[2] == buttonArray[4] && buttonArray[2] == buttonArray[6]
-//    }
-//
-//    private fun checkForWin(): Boolean {
-//        return checkRowForWin() ||
-//                checkColForWin() ||
-//                checkLeftDiagForWin() ||
-//                checkRightDiagForWin()
-//    }
-//
-//    @SuppressLint("SetTextI18n")
-//    private fun handleWin() {
-//        winLoseText.text = "$currentMove Wins!"
-//    }
+    private fun checkRowForWin(buttonArray : Array<CharSequence>): Boolean {
+        for (row in 0..2) {
+            if (buttonArray[3 * row] == buttonArray[3 * row + 1] && buttonArray[3 * row] == buttonArray[3 * row + 2] && buttonArray[3 * row] != "") {
+                return true
+            }
+        }
+        return false
+    }
+
+    private fun checkColForWin(buttonArray : Array<CharSequence>): Boolean {
+        for (col in 0..2) {
+            if (buttonArray[col] == buttonArray[col + 3] && buttonArray[col] == buttonArray[col + 6] && buttonArray[col] != "") {
+                return true
+            }
+        }
+        return false
+    }
+
+    private fun checkLeftDiagForWin(buttonArray : Array<CharSequence>): Boolean {
+        return buttonArray[0] == buttonArray[4] && buttonArray[0] == buttonArray[8] && buttonArray[0] != ""
+    }
+
+    private fun checkRightDiagForWin(buttonArray : Array<CharSequence>): Boolean {
+        return buttonArray[2] == buttonArray[4] && buttonArray[2] == buttonArray[6] && buttonArray[2] != ""
+    }
+
+    private fun checkForWin(): Boolean {
+    var button0 : Button = findViewById(R.id.button0)
+    var button1 : Button = findViewById(R.id.button1)
+    var button2 : Button = findViewById(R.id.button2)
+    var button3 : Button = findViewById(R.id.button3)
+    var button4 : Button = findViewById(R.id.button4)
+    var button5 : Button = findViewById(R.id.button5)
+    var button6 : Button = findViewById(R.id.button6)
+    var button7 : Button = findViewById(R.id.button7)
+    var button8 : Button = findViewById(R.id.button8)
+    var buttonArray : Array<CharSequence> = arrayOf(
+        button0.text, button1.text, button2.text, button3.text, button4.text, button5.text, button6.text, button7.text, button8.text)
+
+
+    return checkRowForWin(buttonArray) ||
+                checkColForWin(buttonArray) ||
+                checkLeftDiagForWin(buttonArray) ||
+                checkRightDiagForWin(buttonArray)
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun handleWin() {
+        val winLoseText : TextView = findViewById(R.id.winLose)
+        winLoseText.text = "$currentMove Wins!"
+    }
 
     private fun handleMove() {
-//        val win: Boolean = checkForWin()
-//        if(win){
-//            handleWin()
-//        }
+        val win: Boolean = checkForWin()
+        if(win){
+            handleWin()
+        }
         changeCurrentMove()
 
     }
@@ -79,6 +94,7 @@ class MainActivity : AppCompatActivity() {
 
     fun buttonClick0(view: View) {
         var button : Button = findViewById(R.id.button0)
+        var text : TextView = findViewById(R.id.winLose)
         if (button.text == "") {
             button.text = currentMove
             handleMove()
